@@ -25,7 +25,4 @@ class Cat
     @mood = "nervous"
     @owner = nil
   end 
-  
-
-  
 end
