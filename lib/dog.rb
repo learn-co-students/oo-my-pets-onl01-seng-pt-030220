@@ -12,17 +12,17 @@ class Dog
     @@all << self
     owner.add_dog(self)
   end
-
+  
   def self.all
     @@all
   end
   
   def walk
-    self.mood = 'happy'
+    @mood = "happy"
   end
   
   def sell
-    self.mood = 'nervous'
+    @mood = "nervous"
     self.owner = nil
   end
   

@@ -18,11 +18,11 @@ class Cat
   end
   
   def feed
-    self.mood = "happy"
+    @mood = "happy"
   end
   
   def sell
-    self.mood = "nervous"
+    @mood = "nervous"
     self.owner = nil
   end
   
