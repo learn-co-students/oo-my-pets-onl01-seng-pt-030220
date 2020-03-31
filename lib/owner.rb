@@ -40,15 +40,28 @@ class Owner
   end
 
   def buy_cat(name)
-    #name.owner = self
-    new_cat = Cat.all.select do |i|
+  
+    new_cat = Cat.all.detect do |i|
       i.name == name   
     end
-   # binding.pry
+   
+   if new_cat == nil || []
+      Cat.new(name, self)
+   else
     new_cat.owner= self
+   end
   end
 
-  def buy_dog
+  def buy_dog(name)
+    new_dog = Dog.all.detect do |i|
+      i.name == name   
+    end
+   
+   if new_dog == nil || []
+      Dog.new(name, self)
+   else
+    new_dog.owner= self
+   end
   end
 
   def walk_dogs
@@ -76,13 +89,9 @@ class Owner
   end
 
   def list_pets
-    dogs.each do |i|
-      puts i
-    end
-
-    cats.each do |i|
-      puts i
-    end
+    dog_num = dogs.count
+    cat_num = cats.count
+    list = "I have #{dog_num.to_s} dog(s), and #{cat_num.to_s} cat(s)."
   end
 
   
