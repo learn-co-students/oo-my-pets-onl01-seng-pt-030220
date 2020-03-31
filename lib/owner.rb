@@ -1,3 +1,5 @@
+require_relative "cat.rb"
+require_relative "dog.rb"
 require 'pry'
 class Owner
   attr_reader :name, :species
@@ -69,8 +71,45 @@ class Owner
 
 end
 
-# me = Owner.new("marcos")
-# dog = Dog.new("brown", me)
-# cat = Cat.new("yella", me)
+# marc = Owner.new("Marcos")
+# puts marc.name
+# # puts marc.species
+# puts marc.say_species
+# puts "====="
 
-# me.list_pets
+# doggy = Dog.new("Sparky", marc)
+# puts doggy
+# puts doggy.name
+# puts doggy.mood
+# puts doggy.owner.name
+# puts doggy.owner.species
+# puts "====="
+
+# kitty = Cat.new("Tinkles", marc)
+# puts kitty
+# puts kitty.name
+# puts kitty.mood
+# puts kitty.owner.name
+# puts kitty.owner.species
+# puts "====="
+
+# marc.buy_cat("Timmy")
+# marc.buy_dog("Tonka")
+# puts marc.list_pets
+# puts "====="
+
+# marc.buy_cat("Tim")
+# marc.buy_dog("Ton")
+# puts marc.list_pets
+# puts "====="
+
+# marc.walk_dogs
+# marc.feed_cats
+# puts kitty.mood
+# puts doggy.mood
+# puts "====="
+
+# marc.sell_pets
+# puts kitty.mood
+# puts doggy.mood
+# puts marc.list_pets
